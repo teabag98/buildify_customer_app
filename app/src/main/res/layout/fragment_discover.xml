@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="4dp">
+
+            <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                android:id="@+id/tvFilter"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:drawableRight="@drawable/ic_drop_down"
+                android:gravity="center_vertical"
+                android:text="@string/all_categories"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/card">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDiscover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+    <com.qinsley.mbcustomer.utils.CustomTextViewBold
+        android:id="@+id/tvNotFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_artist_found"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/headergradient" />
+
+            <ImageView
+                android:id="@+id/ivDr."
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-50dp"
+                android:src="@drawable/review_header" />
+
+            <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-150dp"
+                android:text="@string/write_review"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <RatingBar
+                android:id="@+id/rbReview"
+                style="@style/RatingBarMy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:numStars="5"
+                android:stepSize="1"
+                android:theme="@style/RatingBarMy" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/yourReviewTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <com.qinsley.mbcustomer.utils.CustomEditText
+                    android:id="@+id/yourReviewET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:ellipsize="end"
+                    android:hint="@string/your_review"
+                    android:maxLength="200"
+                    android:maxLines="4"
+                    android:singleLine="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.qinsley.mbcustomer.utils.CustomTextView
+                android:id="@+id/tvCharReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:text="0/200"
+                android:textSize="14sp" />
+
+
+            <com.qinsley.mbcustomer.utils.CustomButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_selector2"
+                android:text="@string/submit"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        android:src="@drawable/back" />
+
+</RelativeLayout>

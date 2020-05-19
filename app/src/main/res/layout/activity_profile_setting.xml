@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.qinsley.mbcustomer.ui.fragment.ProfileSettingActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/header"
+                    android:padding="10dp">
+
+                    <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_picture"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@+id/title"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/dummyuser_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivProfile"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <com.qinsley.mbcustomer.utils.CustomButton
+                            android:id="@+id/btnDelete"
+                            android:layout_width="80dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/button_selector3"
+                            android:text="@string/delete"
+                            android:textColor="@color/white"
+                            />
+
+                        <com.qinsley.mbcustomer.utils.CustomButton
+                            android:id="@+id/btnChange"
+                            android:layout_width="80dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/button_selector3"
+                            android:text="@string/change"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/header"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                            android:id="@+id/title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/personal_information"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/ivPersonalInfoChange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_edit" />
+
+                    </RelativeLayout>
+
+                    <com.qinsley.mbcustomer.utils.InputFieldView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.qinsley.mbcustomer.utils.CustomEditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:hint="@string/full_name"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColorHint="@color/black" />
+
+                    </com.qinsley.mbcustomer.utils.InputFieldView>
+
+                    <com.qinsley.mbcustomer.utils.InputFieldView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.qinsley.mbcustomer.utils.CustomEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:hint="@string/email_address"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColorHint="@color/black" />
+
+                    </com.qinsley.mbcustomer.utils.InputFieldView>
+
+
+                    <com.qinsley.mbcustomer.utils.InputFieldView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.qinsley.mbcustomer.utils.CustomEditText
+                            android:id="@+id/etMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:hint="@string/mobile_number"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColorHint="@color/black" />
+
+                    </com.qinsley.mbcustomer.utils.InputFieldView>
+
+                    <com.qinsley.mbcustomer.utils.InputFieldView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.qinsley.mbcustomer.utils.CustomEditText
+                            android:id="@+id/etGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:hint="@string/gender"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColorHint="@color/black" />
+
+                    </com.qinsley.mbcustomer.utils.InputFieldView>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/header"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                            android:id="@+id/title4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/set_address"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/ivAddressChange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_edit" />
+
+                    </RelativeLayout>
+
+
+                    <com.qinsley.mbcustomer.utils.InputFieldView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.qinsley.mbcustomer.utils.CustomEditText
+                            android:id="@+id/etAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:hint="@string/enter_your_address"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColorHint="@color/black" />
+
+                    </com.qinsley.mbcustomer.utils.InputFieldView>
+
+                    <com.qinsley.mbcustomer.utils.InputFieldView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.qinsley.mbcustomer.utils.CustomEditText
+                            android:id="@+id/etCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:hint="@string/city"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColorHint="@color/black" />
+
+                    </com.qinsley.mbcustomer.utils.InputFieldView>
+
+                    <com.qinsley.mbcustomer.utils.InputFieldView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.qinsley.mbcustomer.utils.CustomEditText
+                            android:id="@+id/etCountry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:hint="@string/country"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColorHint="@color/black" />
+
+                    </com.qinsley.mbcustomer.utils.InputFieldView>
+
+                    <com.qinsley.mbcustomer.utils.InputFieldView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.qinsley.mbcustomer.utils.CustomEditText
+                            android:id="@+id/etAddressSelect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:hint="@string/set_location"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColorHint="@color/black" />
+
+                    </com.qinsley.mbcustomer.utils.InputFieldView>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card4"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardElevation="4dp">>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/llChangePass"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_change_pass" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8">
+
+                            <com.qinsley.mbcustomer.utils.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/password_change"
+                                android:textColor="@color/black_off"
+                                android:textSize="16sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_right_arrow_gray" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/llLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_logout" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8">
+
+                            <com.qinsley.mbcustomer.utils.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/signout"
+                                android:textColor="@color/black_off"
+                                android:textSize="16sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_right_arrow_gray" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/RRsncbar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"></RelativeLayout>
+
+
+</RelativeLayout>

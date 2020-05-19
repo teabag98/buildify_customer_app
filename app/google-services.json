@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "974441475505",
+    "firebase_url": "https://fab-fundi.firebaseio.com",
+    "project_id": "fab-fundi",
+    "storage_bucket": "fab-fundi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974441475505:android:2270999de503e7f8bae190",
+        "android_client_info": {
+          "package_name": "com.qinsley.mbcustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974441475505-0hapdn8ba8rvfds0d7no9n8q5nqiklmf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi-jTj5chgtGox-3lhBEjPwv2STX4Gn20"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974441475505-0hapdn8ba8rvfds0d7no9n8q5nqiklmf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974441475505:android:3a3a7f7ad4b583d1bae190",
+        "android_client_info": {
+          "package_name": "com.qinsley.mbuildify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974441475505-0hapdn8ba8rvfds0d7no9n8q5nqiklmf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi-jTj5chgtGox-3lhBEjPwv2STX4Gn20"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974441475505-0hapdn8ba8rvfds0d7no9n8q5nqiklmf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

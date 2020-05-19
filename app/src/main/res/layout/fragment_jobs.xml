@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="gone"
+        android:background="@color/colorPrimary">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorPrimary"
+            app:cardCornerRadius="5dp">
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/svSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="false"
+                android:paddingLeft="3dp"
+                app:defaultQueryHint="@string/search_by_job"
+                app:iconifiedByDefault="false"
+                app:theme="@style/AppSearchView">
+
+
+            </androidx.appcompat.widget.SearchView>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlSearch">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVhistorylist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+        <com.qinsley.mbcustomer.utils.CustomTextViewBold
+            android:id="@+id/tvNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/no_jobs_found"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/ivPost"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/post_type" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

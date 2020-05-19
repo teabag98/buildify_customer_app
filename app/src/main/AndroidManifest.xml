@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.qinsley.mbcustomer">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Permission to use camera - required -->
+    <!-- Camera features - recommended -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" /> <!-- Supports Screens -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/launcher_23"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/launcher_23"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup,android:supportsRtl">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.Booking"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name="com.qinsley.mbcustomer.ui.activity.ServiceSlider" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.ViewInvoice"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.Privacy"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.Terms"
+            android:screenOrientation="portrait"
+            />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.qinsley.mbcustomer.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/places_api_key" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name="com.qinsley.mbcustomer.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.ArtistProfile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.AppIntro"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.SignInActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.PromotionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.utils.MainFragment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.OneTwoOneChat"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.CommentOneByOne"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.ForgotPass"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.PaymentProActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.PostJob"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.EditJob"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.AppliedJob"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.MapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.WriteReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.PaymetWeb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.qinsley.mbcustomer.ui.activity.AddMoney"
+            android:screenOrientation="portrait" />
+
+        <!-- [START firebase_service] -->
+        <service android:name="com.qinsley.mbcustomer.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- [END firebase_service] -->
+        <!-- [START firebase_iid_service] -->
+        <!-- FirebaseInstanceIdService performs security checks at runtime,
+      no need for explicit permissions despite exported="true"             -->
+        <service android:name=".MyFirebaseInstanceIdService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <!-- [END firebase_iid_service] -->
+
+        <!-- <meta-data -->
+        <!-- android:name="io.fabric.ApiKey" -->
+        <!-- android:value="6956ee260d8a46359094304995f81a6c154130cd" /> -->
+        <activity android:name="com.qinsley.mbcustomer.ui.activity.ViewServices" />
+        <activity
+            android:name="com.schibstedspain.leku.LocationPickerActivity"
+            android:label="@string/leku_title_activity_location_picker"
+            android:parentActivityName="com.qinsley.mbcustomer.ui.activity.BaseActivity"
+            android:theme="@style/AppTheme.Map"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/leku_searchable" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qinsley.mbcustomer.ui.activity.BaseActivity" />
+        </activity>
+    </application>
+
+</manifest>

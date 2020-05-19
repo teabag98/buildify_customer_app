@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qinsley.mbcustomer.ui.activity.PaymentProActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/headergradient">
+
+            <ImageView
+                android:id="@+id/IVback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:padding="10dp"
+                android:src="@drawable/back" />
+
+            <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                android:id="@+id/tvNameHedar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/payment"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            android:layout_margin="10dp"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                    android:id="@+id/tvTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:singleLine="true"
+                    android:text="@string/work_completed"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivArtist"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@+id/tvTxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/dummyuser_image" />
+
+
+                <com.qinsley.mbcustomer.utils.CustomTextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivArtist"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCategory"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:singleLine="true"
+                    android:text="Mak Barve"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/llLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_placeholder" />
+
+                    <com.qinsley.mbcustomer.utils.CustomTextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llLocation"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="5dp"
+                    card_view:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <com.qinsley.mbcustomer.utils.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/apply_coupon_code"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/light_gray"
+                            android:orientation="horizontal">
+
+                            <com.qinsley.mbcustomer.utils.CustomEditText
+                                android:id="@+id/etCode"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="0.6"
+                                android:background="@android:color/transparent"
+                                android:hint="@string/write_code_here"
+                                android:paddingLeft="5dp"
+                                android:textSize="14sp" />
+
+                            <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                                android:id="@+id/tvApplyCode"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="3dp"
+                                android:layout_weight="0.4"
+                                android:background="@drawable/button_selector3"
+                                android:drawablePadding="8dp"
+                                android:gravity="center"
+                                android:text="@string/apply_code"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                                android:id="@+id/tvCancelCode"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="3dp"
+                                android:layout_weight="0.4"
+                                android:background="@drawable/button_selector3"
+                                android:drawablePadding="8dp"
+                                android:gravity="center"
+                                android:text="CANCEL"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPayInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardCode"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="5dp"
+                    card_view:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.qinsley.mbcustomer.utils.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/total_amount"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                            android:id="@+id/tvAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:id="@+id/llPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/cardPayInfo"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_selector3"
+                    android:gravity="center">
+
+                    <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:text="@string/online_payment"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llPayment"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tvOR"
+                        android:background="@color/gray" />
+
+                    <com.qinsley.mbcustomer.utils.CustomTextView
+                        android:id="@+id/tvOR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/or" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tvOR"
+                        android:background="@color/gray" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rlOr"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_selector3"
+                    android:gravity="center">
+
+                    <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:text="@string/cash_payment1"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOr1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llCash"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tvOR1"
+                        android:background="@color/gray" />
+
+                    <com.qinsley.mbcustomer.utils.CustomTextView
+                        android:id="@+id/tvOR1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/or" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tvOR1"
+                        android:background="@color/gray" />
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/llWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rlOr1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_selector3"
+                    android:gravity="center">
+
+                    <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:text="@string/pay_by_wallet"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

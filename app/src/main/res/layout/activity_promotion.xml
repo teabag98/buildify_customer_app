@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.qinsley.mbcustomer.ui.activity.PromotionActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/headergradient">
+
+        <ImageView
+            android:id="@+id/IVback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <com.qinsley.mbcustomer.utils.CustomTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/promotion"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <com.qinsley.mbcustomer.utils.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply_code1" />
+
+        <com.qinsley.mbcustomer.utils.CustomEditText
+            android:id="@+id/CETcode"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editframe"
+            android:gravity="left"
+            android:hint="@string/write_code_here"
+            android:paddingLeft="5dp" />
+
+    </LinearLayout>
+
+    <com.qinsley.mbcustomer.utils.CustomButton
+        android:id="@+id/CBapplycode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_selector2"
+        android:text="@string/apply_code1"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

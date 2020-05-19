@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.qinsley.mbcustomer.ui.fragment.MyBooking">
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorPrimary"
+            app:cardCornerRadius="5dp">
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/svSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="false"
+                android:paddingLeft="3dp"
+                app:defaultQueryHint="@string/search_by_artist"
+                app:iconifiedByDefault="false"
+                app:theme="@style/AppSearchView">
+
+
+            </androidx.appcompat.widget.SearchView>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlaout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlSearch">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBooking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.swiperefreshlaout.widget.SwipeRefreshLayout>
+
+
+    <com.qinsley.mbcustomer.utils.CustomTextViewBold
+        android:id="@+id/tvNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_booking_found"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

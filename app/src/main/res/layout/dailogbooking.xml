@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/dialog_back"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/dialog_back"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_back_blue">
+
+            <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                android:id="@+id/ctvbTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/booking"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.qinsley.mbcustomer.utils.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.qinsley.mbcustomer.utils.CustomEditText
+                    android:id="@+id/etService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/select_services"
+                    android:editable="false"
+                    android:text="" />
+
+            </com.qinsley.mbcustomer.utils.InputOpenFieldView>
+
+            <com.qinsley.mbcustomer.utils.InputFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.qinsley.mbcustomer.utils.CustomEditText
+                    android:id="@+id/etDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:hint="@string/select_date"
+                    android:text="" />
+
+            </com.qinsley.mbcustomer.utils.InputFieldView>
+
+
+            <com.qinsley.mbcustomer.utils.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.qinsley.mbcustomer.utils.CustomEditText
+                    android:id="@+id/etPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_place"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:text="" />
+
+            </com.qinsley.mbcustomer.utils.InputOpenFieldView>
+            <com.qinsley.mbcustomer.utils.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.qinsley.mbcustomer.utils.CustomEditText
+                    android:id="@+id/etTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/estimate_time_minutes"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:maxLength="3"
+                    android:text="" />
+
+            </com.qinsley.mbcustomer.utils.InputOpenFieldView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="35dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                android:id="@+id/tvYes"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark" />
+
+            <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                android:id="@+id/tvNo"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="@string/cancel1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

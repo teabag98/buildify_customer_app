@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/RRview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                    android:id="@+id/tvTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/job_id" />
+
+                <com.qinsley.mbcustomer.utils.CustomTextView
+                    android:id="@+id/tvJobId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tvTxt"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary" />
+
+                <com.qinsley.mbcustomer.utils.CustomTextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTxt"
+                    android:text="" />
+
+                <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text=""
+                    android:textSize="24sp"
+                    android:textColor="@color/colorPrimary" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/RRview"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:id="@+id/RRview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginTop="8dp">
+
+                <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                    android:id="@+id/CTVBser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/services_type" />
+
+                <com.qinsley.mbcustomer.utils.CustomTextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/CTVBser"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <LinearLayout
+                    android:id="@+id/llStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/rectangle_red">
+
+                    <com.qinsley.mbcustomer.utils.CustomTextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/pending"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RRview1"
+                android:layout_marginTop="5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/dummyuser_image" />
+
+                <com.qinsley.mbcustomer.utils.CustomTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/ivProfile"
+                    android:text=""
+                    android:textAllCaps="true" />
+
+                <ImageView
+                    android:id="@+id/icChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_chat_color" />
+
+
+                <com.qinsley.mbcustomer.utils.CustomTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/ivProfile"
+                    android:text="" />
+
+                <LinearLayout
+                    android:id="@+id/llRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDescription"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/ivProfile"
+                    android:gravity="center">
+
+                    <RatingBar
+                        android:id="@+id/ratingbar"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:theme="@style/RatingBar" />
+
+                    <com.qinsley.mbcustomer.utils.CustomTextView
+                        android:id="@+id/tvRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="(0.0/5)"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llRate"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/ivProfile"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/ic_mobile" />
+
+                        <com.qinsley.mbcustomer.utils.CustomTextView
+                            android:id="@+id/tvMobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/ic_email" />
+
+                        <com.qinsley.mbcustomer.utils.CustomTextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/ic_placeholder" />
+
+                        <com.qinsley.mbcustomer.utils.CustomTextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llACDE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlPhoto"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/llAccept"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/button_selectorgreen"
+                    android:gravity="center">
+
+                    <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_right_white"
+                        android:drawablePadding="8dp"
+                        android:text="@string/accept"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDecline"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/button_selector3"
+                    android:gravity="center">
+
+                    <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_close_white"
+                        android:drawablePadding="8dp"
+                        android:text="@string/reject1"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWating"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/llACDE"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_selectorgreen"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:text="@string/artist_will_soon"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llComplete"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/llACDE"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_selectorgreen"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.qinsley.mbcustomer.utils.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_right_white"
+                    android:drawablePadding="8dp"
+                    android:text="@string/complete1"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
