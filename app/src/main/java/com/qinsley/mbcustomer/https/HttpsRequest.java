@@ -118,7 +118,6 @@ public class HttpsRequest {
     public void stringGet(final String TAG, final Helper h) {
         AndroidNetworking.get(Consts.BASE_URL + match)
                 .setTag("test")
-
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {

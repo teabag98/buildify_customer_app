@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class LocationDTO implements Serializable {
 
-   public String latitude = "";
-   public String longitude = "";
+   public String latitude ="";
+   public String longitude= "";
 
     public String getLati() {
         return latitude;

@@ -85,7 +85,7 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.C
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
     private String TAG = BaseActivity.class.getSimpleName();
-    HashMap<String, String> parms = new HashMap<>();
+    HashMap<String, String> params = new HashMap<>();
 
     private FrameLayout frame;
     private View contentView;
@@ -573,11 +573,11 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.C
                                 prefrence.setValue(Consts.LATITUDE, latitude + "");
                                 prefrence.setValue(Consts.LONGITUDE, longitude + "");
 
-                                parms.put(Consts.USER_ID, userDTO.getUser_id());
-                                parms.put(Consts.ROLE, "2");
-                                parms.put(Consts.LATITUDE, latitude + "");
-                                parms.put(Consts.LONGITUDE, longitude + "");
-                                updateLocation();
+                                params.put(Consts.USER_ID, userDTO.getUser_id());
+                                params.put(Consts.ROLE, "2");
+                                params.put(Consts.LATITUDE, latitude + "");
+                                params.put(Consts.LONGITUDE, longitude + "");
+
 
                                 Log.d("messagejjjkkj", "customer location" + latitude + longitude);
 
@@ -585,6 +585,7 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.C
                                 Toast.makeText(BaseActivity.this, "Turn on your GPS to enable your location update", Toast.LENGTH_LONG).show();
                                 Log.d("message", "turn on your GPS mtfk");
                             }
+                            updateLocation();
 
 //                            final Status status = result.getStatus();
 //                            switch (status.getStatusCode()) {
@@ -668,12 +669,13 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.C
             prefrence.setValue(Consts.LATITUDE, latitude + "");
             prefrence.setValue(Consts.LONGITUDE, longitude + "");
 
-            parms.put(Consts.USER_ID, userDTO.getUser_id());
-            parms.put(Consts.ROLE, "2");
-            parms.put(Consts.LATITUDE, latitude + "");
-            parms.put(Consts.LONGITUDE, longitude + "");
-            updateLocation();
+            params.put(Consts.USER_ID, userDTO.getUser_id());
+            params.put(Consts.ROLE, "2");
+            params.put(Consts.LATITUDE, latitude + "");
+            params.put(Consts.LONGITUDE, longitude + "");
+
         }
+        updateLocation();
     }
 
 
@@ -715,7 +717,7 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.C
 
     public void updateLocation() {
         // ProjectUtils.showProgressDialog(mContext, true, getResources().getString(R.string.please_wait));
-        new HttpsRequest(Consts.UPDATE_LOCATION_API, parms, mContext).stringPost(TAG, new Helper() {
+        new HttpsRequest(Consts.UPDATE_LOCATION_API, params, mContext).stringPost(TAG, new Helper() {
             @Override
             public void backResponse(boolean flag, String msg, JSONObject response) {
                 if (flag) {

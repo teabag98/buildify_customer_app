@@ -58,9 +58,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         GoogleApiClient.OnConnectionFailedListener {
 
     private Context mContext;
-    private String staffLat = "";
+    private String staffLat;
     private String TAG = MapActivity.class.getSimpleName();
-    private String staffLongi = "";
+    private String staffLongi;
 
     private static final int REQUEST_LOCATION = 0;
     private static GoogleMap mMap;
@@ -156,7 +156,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     };
 
     public void getLocation() {
-        new HttpsRequest(Consts.GET_LOCATION_ARTIST_API, getParmlocation(), mContext).stringGet(TAG, new Helper() {
+        new HttpsRequest(Consts.GET_LOCATION_ARTIST_API, getParmlocation(), mContext).stringPost(TAG, new Helper() {
             @Override
             public void backResponse(boolean flag, String msg, JSONObject response) {
                 if (flag) {
@@ -167,10 +167,11 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                         staffLat = locationDTO.getLati();
                         staffLongi = locationDTO.getLongi();
 
+
                         Log.e("Eric Sir", staffLat + " " + " " + staffLongi);
                         Log.d("Sir Eric", staffLat + " " + staffLongi);
-
                         displayLocation();
+
 
 
                     } catch (Exception e) {
@@ -181,7 +182,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 }
             }
         });
+
     }
+
 
     public Map<String, String> getParmlocation() {
 
@@ -206,8 +209,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 latitude = Double.parseDouble(staffLat);
                 longitude = Double.parseDouble(staffLongi);
 
-                mCurrentLocation.setLatitude(Double.parseDouble(staffLat));
-                mCurrentLocation.setLongitude(Double.parseDouble(staffLongi));
 
                 if (mCurrentLocation != null) {
                     Log.d("staff loc", staffLat + staffLongi);
@@ -215,7 +216,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     addMarker(mMap, latitude, longitude);
                 } else {
                     Toast.makeText(mContext, getResources().getString(R.string.location_enabled),
-                            Toast.LENGTH_SHORT).show();
+                            Toast.LENGTH_LONG).show();
                 }
 
             }

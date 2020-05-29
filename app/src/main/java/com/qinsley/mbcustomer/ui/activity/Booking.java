@@ -130,6 +130,7 @@ public class Booking extends AppCompatActivity {
             paramsBookingOp.put(Consts.ADDRESS, userDTO.getOffice_address());
             paramsBookingOp.put(Consts.LATITUDE, userDTO.getLive_lat());
             paramsBookingOp.put(Consts.LONGITUDE, userDTO.getLive_long());
+
         }
         binding.tvAddress.setOnClickListener(new View.OnClickListener() {
             @Override
