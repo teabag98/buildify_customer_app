@@ -42,7 +42,7 @@
 
     </RelativeLayout>
 
-    <androidx.swiperefreshlaout.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,7 +55,7 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
-    </androidx.swiperefreshlaout.widget.SwipeRefreshLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
     <com.qinsley.mbcustomer.utils.CustomTextViewBold
