@@ -64,6 +64,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     private static final int REQUEST_LOCATION = 0;
     private static GoogleMap mMap;
+    private int mapType;
     private int markerCount;
     public double latitude;
     public double longitude;
@@ -111,12 +112,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     // TODO: debug class
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        mapType = GoogleMap.MAP_TYPE_NORMAL;
 
         mMap = googleMap;
         if (mMap != null) {
-            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(Double.parseDouble(prefrence.getValue(Consts.LATITUDE)), Double.parseDouble(prefrence.getValue(Consts.LONGITUDE))), 10);
+            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(Double.parseDouble(prefrence.getValue(Consts.LATITUDE)), Double.parseDouble(prefrence.getValue(Consts.LONGITUDE))), 15);
             mMap.setMinZoomPreference(6.0f);
             mMap.setMaxZoomPreference(14.0f);
+            mMap.setMapType(mapType);
             mMap.animateCamera(cameraUpdate);
             marker = mMap.addMarker(new MarkerOptions().position(new LatLng(Double.parseDouble(prefrence.getValue(Consts.LATITUDE)), Double.parseDouble(prefrence.getValue(Consts.LONGITUDE)))).title("My Location"));
         }
@@ -239,7 +242,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         } else if (markerCount == 0) {
             mMap = googleMap;
-            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lon), 10);
+            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lon), 15);
             mMap.animateCamera(cameraUpdate);
             marker = mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon)).title(getResources().getString(R.string.artist_here)).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_car)));
 
