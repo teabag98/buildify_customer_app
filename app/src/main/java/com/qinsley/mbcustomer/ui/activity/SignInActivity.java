@@ -8,6 +8,8 @@ import android.content.SharedPreferences;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+
+import android.os.Build;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
@@ -105,8 +107,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                         Intent in = new Intent(mContext, BaseActivity.class);
                         startActivity(in);
                         finish();
-                        overridePendingTransition(R.anim.anim_slide_in_left,
-                                R.anim.anim_slide_out_left);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ECLAIR) {
+                            overridePendingTransition(R.anim.anim_slide_in_left,
+                                    R.anim.anim_slide_out_left);
+                        }
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
