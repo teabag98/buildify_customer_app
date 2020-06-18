@@ -40,7 +40,7 @@
         android:layout_below="@+id/header"
         android:background="@color/colorPrimary">
 
-        <androidx.cardview.widget.Cardview
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -63,7 +63,7 @@
 
 
             </androidx.appcompat.widget.SearchView>
-        </androidx.cardview.widget.Cardview>
+        </androidx.cardview.widget.CardView>
 
 
     </RelativeLayout>

@@ -171,7 +171,7 @@
     <string name="didn_t_have_any_account">Don\'t have an account?</string>
     <string name="first_name">Full Name</string>
     <string name="enter_password_again">Re-enter Password</string>
-    <string name="referal">Enter Referal Code</string>
+    <string name="referal">Enter Referall Code</string>
     <string name="do_you_have_an_account_already">Do you have an account already?</string>
     <string name="write_review">Write Review</string>
     <string name="your_review">Your Review*</string>
@@ -202,7 +202,7 @@
     <string name="payment_option">Payment Option</string>
     <string name="select">Select</string>
     <string name="no_appointment_found">No Appointment Found</string>
-    <string name="no_artist_found">No Artist Found</string>
+    <string name="no_artist_found">No Artistan Found</string>
     <string name="nearby">Nearby</string>
     <string name="discover">Discover</string>
     <string name="search_by_job">Search by Job Title</string>
@@ -242,7 +242,7 @@
     <string name="no_service">No service found</string>
     <string name="no_gallery_found">No Gallery Found</string>
     <string name="no_reviews_found">No Reviews Found</string>
-    <string name="no_privious_found">No Privious work Found</string>
+    <string name="no_privious_found">No Previous work Found</string>
     <string name="no_services_found">No Services Found</string>
     <string name="no_data_found">No data found</string>
     <string name="date1">Date</string>
