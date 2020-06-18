@@ -23,7 +23,7 @@
         r</string>
     <string name="fixed_rate_add_on">fixed rate</string>
     <string name="reviews">REVIEW(</string>
-    <string name="book_artist">Book Fundi</string>
+    <string name="book_artist">Book Artisan</string>
     <string name="book_msg">Are you sure to book</string>
     <string name="chats">Chats</string>
     <string name="val_comment">Please enter comment</string>
@@ -36,7 +36,7 @@
     <string name="select_category">Select Category</string>
     <string name="val_email">Please enter email id.</string>
     <string name="location_enabled">Couldn\'t get the location. Make sure location is enabled on the device</string>
-    <string name="artist_here">Fundi here</string>
+    <string name="artist_here">Artisan here</string>
     <string name="my_bookings">My Bookings</string>
     <string name="cash_payment">Cash Payment</string>
     <string name="cash_msg">Are you sure want to do cash payment?</string>
@@ -52,7 +52,7 @@
     <string name="completed">Completed</string>
     <string name="decline">Declined</string>
     <string name="decline_msg">Are you sure you want to decline this appointment?</string>
-    <string name="waiting_artist">Waiting for fundi\'s response</string>
+    <string name="waiting_artist">Waiting for artisan\'s response</string>
     <string name="request_acc">Request accepted by fundi</string>
     <string name="invoice_genrate">Invoice Generated</string>
     <string name="invoice_paid">Invoice Paid</string>
@@ -104,7 +104,7 @@
     <string name="sign_up">Sign Up</string>
     <string name="sign_in">Sign In</string>
     <string name="applied_job">Applicants</string>
-    <string name="search_by_artist">Search by Fundi</string>
+    <string name="search_by_artist">Search by Artisan</string>
     <string name="no_application_found">No Application Found</string>
     <string name="book_now">BOOK NOW</string>
     <string name="quick_chat">QUICK CHAT</string>
@@ -178,7 +178,7 @@
     <string name="services_type">Services type:</string>
     <string name="accept">Accept</string>
     <string name="reject1">Reject</string>
-    <string name="artist_will_soon">Fundi will soon</string>
+    <string name="artist_will_soon">Artisan will soon</string>
     <string name="complete1">Complete</string>
     <string name="edit">Edit</string>
     <string name="decline1">Decline</string>
@@ -202,7 +202,11 @@
     <string name="payment_option">Payment Option</string>
     <string name="select">Select</string>
     <string name="no_appointment_found">No Appointment Found</string>
+<<<<<<< HEAD
     <string name="no_artist_found">No Artistan Found</string>
+=======
+    <string name="no_artist_found">No Artisan Found</string>
+>>>>>>> 7a30276c0acbc6d8800796066a4e0f9bfdbe4e9e
     <string name="nearby">Nearby</string>
     <string name="discover">Discover</string>
     <string name="search_by_job">Search by Job Title</string>
